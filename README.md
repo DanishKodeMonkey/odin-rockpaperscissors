@@ -14,9 +14,12 @@ Later on it will be updated to be fleshed out with a Graphical User Interface, b
 ### Try it out!
 
 The project can be tried out on your browsers console!
+Go [here](https://danishkodemonkey.github.io/odin-rockpaperscissors/) to try it out!
+
+#### How to play
 
 <ol>
-<li>go to danishkodemonkey.github.io/odin-rockpaperscissors/ </li>
+<li>Go to the games page via the above link</li>
 <li>and press F12 to open the dev tool</li>
 <li>press the "console" tab of the debugger to enter the console</li>
 <li>Send appropriate commands to the game using the javascript console</li>
