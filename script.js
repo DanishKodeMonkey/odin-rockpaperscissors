@@ -12,27 +12,27 @@ function playRound(playerSelection, computerSelection) {
         case "rock":
           return "It's a draw!"
         case "paper":
-          return "You lose! paper beats rock!"
+          return "You lose!"
         case "scissors":
-          return "You win! rock beats scissors!"
+          return "You win!"
       }
       break
     case "paper":
       switch (computerSelection) {
         case "rock":
-          return "You win! paper beats rock!"
+          return "You win!"
         case "paper":
           return "It's a tie!"
         case "scissors":
-          return "You lose! scissors beat paper!"
+          return "You lose!"
       }
       break
     case "scissors":
       switch (computerSelection) {
         case "rock":
-          return "You lose! rock beats scissors!"
+          return "You lose!"
         case "paper":
-          return "You win! scissors beats paper!"
+          return "You win!"
         case "scissors":
           return "It's a draw!"
       }
@@ -42,6 +42,27 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = prompt("Rock, paper, or scissors?")
-const computerSelection = getComputerChoice()
-console.log(playRound(playerSelection, computerSelection))
+function game() {
+  let playerScore = 0
+  let computerScore = 0
+  let round = 0
+
+  while (round < 5) {
+    let playerSelection = prompt("Rock, paper, or scissors?")
+    let computerSelection = getComputerChoice()
+    let result = playRound(playerSelection, computerSelection)
+
+    console.log(result)
+
+    if (result === "You win!") {
+      playerScore++
+      round++
+    } else if (result === "You lose!") {
+      computerScore++
+      round++
+    }
+    console.log(`Player ${playerScore} - Computer ${computerScore}`)
+  }
+}
+
+game()
