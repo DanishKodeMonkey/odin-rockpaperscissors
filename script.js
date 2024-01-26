@@ -60,6 +60,11 @@ function game() {
     } else if (result === "You lose!") {
       computerScore++
       round++
+    } else if (
+      result ===
+      "Invalid choice, please choose between rock, paper, or scissors"
+    ) {
+      continue
     } else {
       round++
     }
