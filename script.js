@@ -60,8 +60,19 @@ function game() {
     } else if (result === "You lose!") {
       computerScore++
       round++
+    } else {
+      round++
     }
-    console.log(`Player ${playerScore} - Computer ${computerScore}`)
+    console.log(
+      `Round ${round} complete! Player ${playerScore} - Computer ${computerScore}`
+    )
+  }
+  if (playerScore > computerScore) {
+    console.log("Congratulations! You win!")
+  } else if (computerScore > playerScore) {
+    console.log("The computer wins. Ouch...")
+  } else {
+    console.log("It's a draw! Everybody wins!")
   }
 }
 
