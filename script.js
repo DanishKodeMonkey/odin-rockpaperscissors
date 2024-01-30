@@ -3,6 +3,7 @@ function getComputerChoice() {
   let computerChoice = choices[Math.floor(Math.random() * choices.length)]
   return computerChoice
 }
+
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase()
 
@@ -46,39 +47,6 @@ function game() {
   let playerScore = 0
   let computerScore = 0
   let round = 0
-
-  while (round < 5) {
-    let playerSelection = prompt("Rock, paper, or scissors?")
-    let computerSelection = getComputerChoice()
-    let result = playRound(playerSelection, computerSelection)
-
-    console.log(result)
-
-    if (result === "You win!") {
-      playerScore++
-      round++
-    } else if (result === "You lose!") {
-      computerScore++
-      round++
-    } else if (
-      result ===
-      "Invalid choice, please choose between rock, paper, or scissors"
-    ) {
-      continue
-    } else {
-      round++
-    }
-    console.log(
-      `Round ${round} complete! Player ${playerScore} - Computer ${computerScore}`
-    )
-  }
-  if (playerScore > computerScore) {
-    console.log("Congratulations! You win!")
-  } else if (computerScore > playerScore) {
-    console.log("The computer wins. Ouch...")
-  } else {
-    console.log("It's a draw! Everybody wins!")
-  }
 }
 
 game()
