@@ -8,7 +8,7 @@ function playRound(playerSelection) {
   playerSelection = playerSelection.toLowerCase()
   let computerSelection = getComputerChoice()
 
-  let result = () => {
+  let roundResult = () => {
     switch (playerSelection) {
       case "rock":
         switch (computerSelection) {
@@ -44,10 +44,9 @@ function playRound(playerSelection) {
         return "Invalid choice, please choose between rock, paper, or scissors"
     }
   }
-  console.log(result())
+  console.log(roundResult())
 }
 
-let getPlayerSelection = ""
 const buttons = document.querySelectorAll("button")
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
