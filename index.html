@@ -5,18 +5,38 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./style.css" />
     <script src="./script.js"></script>
     <title>Rock paper scissors</title>
   </head>
   <body>
-    The project can be tried out on your browsers console!
-
-    <ol>
-      <li>press F12 to open the dev tools</li>
-      <li>press the "console" tab of the debugger to enter the console</li>
-      <li>
-        Send appropriate commands to the game using the javascript console
-      </li>
-    </ol>
+    <div id="gameContainer">
+      <div id="borderBox">
+        <div id="title">
+          <h1>Rock Paper Scissors!</h1>
+          <h2>Lets play!</h2>
+        </div>
+        <div id="buttonContainer">
+          <span>Pick your option:</span>
+          <button
+            id="rock"
+            class="optionButton">
+            Rock
+          </button>
+          <button
+            id="paper"
+            class="optionButton">
+            paper
+          </button>
+          <button
+            id="scissors"
+            class="optionButton">
+            scissors
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
